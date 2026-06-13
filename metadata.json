@@ -1,0 +1,6 @@
+{
+  "name": "Growa",
+  "description": "AI-powered agricultural insights and crop yield prediction for Nigerian farmers.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

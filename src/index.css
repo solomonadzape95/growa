@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  /* Primary brand scale (forest green) */
+  --color-brand-50: #f2f7f4;
+  --color-brand-100: #e1ede6;
+  --color-brand-200: #c2dbcd;
+  --color-brand-300: #96beaa;
+  --color-brand-400: #679b82;
+  --color-brand-500: #437d64;
+  --color-brand-600: #31624e;
+  --color-brand-700: #274f3f;
+  --color-brand-800: #213f34;
+  --color-brand-900: #1a342b;
+  --color-brand-950: #0e1e19;
+
+  /* Earthy Accent Clay/Brown scale */
+  --color-clay-50: #faf6f0;
+  --color-clay-100: #f4eae0;
+  --color-clay-200: #e5d1be;
+  --color-clay-300: #d1b193;
+  --color-clay-400: #bd8e6b;
+  --color-clay-500: #ae714d;
+  --color-clay-600: #a05d41;
+  --color-clay-700: #854934;
+  --color-clay-800: #6b3d2d;
+  --color-clay-900: #573327;
+  
+  /* Warm Slate Neutrals */
+  --color-warmgray-50: #fafaf9;
+  --color-warmgray-100: #f5f5f4;
+  --color-warmgray-200: #e7e5e4;
+  --color-warmgray-300: #d6d3d1;
+  --color-warmgray-400: #a8a29e;
+  --color-warmgray-500: #78716c;
+  --color-warmgray-600: #57524f;
+  --color-warmgray-700: #44403c;
+  --color-warmgray-800: #292524;
+  --color-warmgray-900: #1c1917;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-warmgray-50);
+    color: var(--color-warmgray-850);
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.95);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1.15);
+    opacity: 0;
+  }
+}
+
+.animate-pulse-ring {
+  animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Subtle grid background pattern */
+.bg-grid-pattern {
+  background-size: 24px 24px;
+  background-image: 
+    linear-gradient(to right, rgba(67, 125, 100, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(67, 125, 100, 0.04) 1px, transparent 1px);
+}
+
